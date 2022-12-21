@@ -7,13 +7,10 @@ const PORT = process.env.PORT
 const app = express()
 
 // MIDDLEWARE
-app.use(express.static('public'))
-
-// MIDDLEWARE
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
-
+app.use(express.static('public'))
 
 // ROUTES
 app.get('/', (req, res) => {
@@ -29,6 +26,7 @@ app.use('/breads', breadsController)
 app.get('*', (req, res) => {
   res.send('404')
 })
+
 
 
 // LISTEN

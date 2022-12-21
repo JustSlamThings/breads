@@ -10,17 +10,19 @@ function Default(html) {
       <link rel="stylesheet" href="/main.css" />
     </head>
     <body>
-          <div className="wrapper">
+  <div className="wrapper">
     <header>
       <h1><a href="/breads">BreadCRUD</a></h1>
     </header>
-      <div className="container">
-        {html.children}
-      </div>
-            </div>
-    </body>
+    <div className="container">
+      {html.children}
+    </div>
+  </div>
+</body>
     </html>
   )
 }
 
 module.exports = Default
+
+
