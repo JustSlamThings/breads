@@ -19,7 +19,6 @@ function Index ({breads, title})  {
     )
   })
 }
-
   </ul>
 </Default>
 
@@ -31,3 +30,4 @@ function Index ({breads, title})  {
 
 
 module.exports = Index
+
