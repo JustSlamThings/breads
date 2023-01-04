@@ -1,6 +1,9 @@
 // DEPENDENCIES
 const express = require('express')
 const mongoose = require('mongoose')
+// DEPENDENCIES
+const methodOverride = require('method-override')
+
 
 // CONFIGURATION
 require('dotenv').config()
@@ -19,6 +22,8 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 
 app.use(express.urlencoded({extended: true}))
+// MIDDLEWARE
+app.use(methodOverride('_method'))
 
 // NEW
 app.get('/new', (req, res) => {
