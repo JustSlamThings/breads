@@ -18,6 +18,7 @@ breads.post('/', (req, res) => {
 
 
 
+
 // INDEX
 breads.get('/', (req, res) => {
     res.render('Index',
@@ -28,12 +29,10 @@ breads.get('/', (req, res) => {
     )
   // res.send(Bread)
 })
-
 // NEW
 breads.get('/new', (req, res) => {
     res.render('new')
 })
-
 
 // SHOW
 breads.get('/:arrayIndex', (req, res) => {

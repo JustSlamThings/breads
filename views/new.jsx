@@ -5,22 +5,18 @@ function New () {
     return (
       <Default>
         <h2>Add a new bread</h2>
-        <form action="/breads" method="POST">
-
-          <label htmlFor="name">Name</label>
+<form action="/breads" method="POST">
+  <label htmlFor="name">Name</label>
+  <input
+  type="text"
+  name="name"
+  id="name"
+  required/>
+          <label htmlFor="image">Image</label>
           <input
             type="text"
-            name="name"
-            id="name"
-            required
-          />
-          <label htmlFor="image">Image Website </label>
-          <input
-            // type="text"
-            // name="image"
-            // id="image"  
-  <input type="url" id="website" name="website"
-  pattern="https?://.+" title="Include http://" required></input>
+            name="image"
+            id="image"/>
           <label htmlFor="hasGluten">Has Gluten?</label>
           <input
             type="checkbox"
@@ -30,13 +26,11 @@ function New () {
           />
           <br />
           <input type="submit"/>
-        </form>
+        </form>                
         <div className="backButton">
   <a href="/breads"><button>Go back to the index</button></a>
 </div>
-
       </Default>
     )
 }
-
 module.exports = New
