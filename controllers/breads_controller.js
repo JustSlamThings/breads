@@ -33,7 +33,6 @@ breads.get('/', (req, res) => {
 breads.get('/new', (req, res) => {
     res.render('new')
 })
-
 // SHOW
 breads.get('/:arrayIndex', (req, res) => {
   if (Bread[req.params.arrayIndex]) {
