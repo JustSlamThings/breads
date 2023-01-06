@@ -28,6 +28,7 @@ function Show ({bread,index}) {
 <a href={`/breads/${index}/edit`}><button>Edit</button></a>
 
 
+
 </Default>
 
     )
