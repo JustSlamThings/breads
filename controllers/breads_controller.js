@@ -40,6 +40,7 @@ breads.get('/:indexArray/edit', (req, res) => {
       index: req.params.indexArray
     })
 })
+
 // UPDATE
 breads.put('/:arrayIndex', (req, res) => {
   if(req.body.hasGluten === 'on'){
@@ -50,6 +51,7 @@ breads.put('/:arrayIndex', (req, res) => {
   Bread[req.params.arrayIndex] = req.body
   res.redirect(`/breads/${req.params.arrayIndex}`)
 })
+
 // SHOW
 breads.get('/:arrayIndex', (req, res) => {
   if (Bread[req.params.arrayIndex]) {
